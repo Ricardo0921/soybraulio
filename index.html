@@ -1,0 +1,2292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Braulio García — Odontólogo, emprendedor y fundador del Instituto del Legado. Acción Masiva, Imperfecta e Inmediata desde Guatemala para el mundo.">
+  <title>Braulio García | Acción Masiva, Imperfecta e Inmediata</title>
+  <link rel="icon" href="images/favicon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MVDDD538');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Pixel de Meta (Facebook) -->
+  <script>
+    !function(f,b,e,v,n,t,s) {
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1060598072919252'); // ID de tu píxel
+    fbq('track', 'PageView');
+  </script>
+  <!-- Fin Pixel de Meta -->
+
+  <style>
+    /* ════════════════════════════════════════
+     RESET & BASE
+  ════════════════════════════════════════ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --black: #000000;
+      --white: #ffffff;
+      --gray: #DCDCDC;
+      --d1: #0d0d0d;
+      --d2: #121212;
+      --d3: #1a1a1a;
+      --border: rgba(255, 255, 255, .07);
+      --gold: #F9DF55;
+      --amber: #F4BB4D;
+      --muted: #8a8a8a;
+      --muted2: #b8b8b8;
+      --gold-grad: linear-gradient(135deg, #F9DF55 0%, #F4BB4D 100%);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ════════════════════════════════════════
+     BUTTONS
+  ════════════════════════════════════════ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 30px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: .88rem;
+      letter-spacing: .35px;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, color .25s ease;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .btn-gold {
+      background: var(--gold-grad);
+      color: #000;
+    }
+
+    .btn-gold::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .22), transparent 60%);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(249, 223, 85, .32);
+    }
+
+    .btn-gold:hover::before {
+      opacity: 1;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255, 255, 255, .22);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--gold);
+      border: 1.5px solid rgba(249, 223, 85, .3);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(249, 223, 85, .07);
+      transform: translateY(-2px);
+    }
+
+    /* ════════════════════════════════════════
+     NAVBAR
+  ════════════════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 60px;
+      transition: padding .35s, background .35s, border-color .35s;
+    }
+
+    #nav.scrolled {
+      background: rgba(0, 0, 0, .94);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 60px;
+    }
+
+    .nav-logo img {
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: .84rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, .72);
+      letter-spacing: .25px;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    /* Mobile toggle */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--white);
+      border-radius: 2px;
+      transition: all .3s;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile drawer */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 998;
+      background: rgba(0, 0, 0, .97);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      padding: 80px 40px 40px;
+    }
+
+    .mobile-drawer.open {
+      display: flex;
+    }
+
+    .mobile-drawer a {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .8);
+      transition: color .2s;
+    }
+
+    .mobile-drawer a:hover,
+    .mobile-drawer a.gold {
+      color: var(--gold);
+    }
+
+    /* ════════════════════════════════════════
+     HERO
+  ════════════════════════════════════════ */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 140px 60px 80px 8%;
+      overflow: hidden;
+    }
+
+    .hero-photo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 62%;
+      object-fit: cover;
+      object-position: top center;
+      pointer-events: none;
+    }
+
+    .hero-mask {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(95deg, rgba(0, 0, 0, .95) 30%, rgba(0, 0, 0, .6) 52%, rgba(0, 0, 0, .0) 80%),
+        linear-gradient(180deg, rgba(0, 0, 0, .2) 0%, transparent 25%, rgba(0, 0, 0, .45) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 560px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      border: 1px solid rgba(249, 223, 85, .35);
+      border-radius: 100px;
+      padding: 6px 16px;
+      margin-bottom: 28px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .hero-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      animation: pulse-dot 2.2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .35;
+        transform: scale(1.6);
+      }
+    }
+
+    .hero-name {
+      font-size: clamp(3.2rem, 7vw, 5.8rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -2px;
+      margin-bottom: 4px;
+    }
+
+    .hero-name-highlight {
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-tagline {
+      font-size: clamp(.85rem, 1.6vw, 1rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: rgba(255, 255, 255, .8);
+      margin-bottom: 22px;
+    }
+
+    .hero-desc {
+      font-size: .98rem;
+      font-weight: 400;
+      line-height: 1.85;
+      color: rgba(255, 255, 255, .6);
+      max-width: 450px;
+      margin-bottom: 40px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+    }
+
+    .hero-scroll {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .7rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--white);
+      animation: bob 2.6s ease-in-out infinite;
+      cursor: pointer;
+    }
+
+    .hero-scroll svg {
+      color: var(--gold);
+      stroke: var(--gold);
+    }
+
+    @keyframes bob {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(9px);
+      }
+    }
+
+    /* ════════════════════════════════════════
+     STATS STRIP
+  ════════════════════════════════════════ */
+    #stats-strip {
+      background: var(--d2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 60px;
+    }
+
+    .stats-row {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 2rem;
+      font-weight: 900;
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.15;
+    }
+
+    .stat-lbl {
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      color: rgba(255, 255, 255, .65);
+      margin-top: 2px;
+    }
+
+    .stat-sep {
+      width: 1px;
+      height: 40px;
+      background: var(--border);
+    }
+
+    /* ════════════════════════════════════════
+     SECTION HELPERS
+  ════════════════════════════════════════ */
+    .section {
+      padding: 96px 60px;
+    }
+
+    .wrap {
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .eyebrow::after {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .sec-title {
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 16px;
+    }
+
+    .sec-title em {
+      font-style: normal;
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .sec-body {
+      font-size: .95rem;
+      font-weight: 400;
+      line-height: 1.85;
+      color: rgba(255, 255, 255, .82);
+    }
+
+    .gold-bar {
+      width: 48px;
+      height: 3px;
+      background: var(--gold-grad);
+      border-radius: 2px;
+      margin-bottom: 26px;
+    }
+
+    /* ════════════════════════════════════════
+     TWO-COLUMN GRID
+  ════════════════════════════════════════ */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .two-col.flip .col-img {
+      order: 2;
+    }
+
+    .two-col.flip .col-text {
+      order: 1;
+    }
+
+    /* ════════════════════════════════════════
+     PHOTO FRAMES
+  ════════════════════════════════════════ */
+    .photo-frame {
+      position: relative;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+      height: 520px;
+    }
+
+    .photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      border: 1.5px solid rgba(249, 223, 85, .18);
+      border-radius: 18px;
+      z-index: -1;
+    }
+
+    .photo-frame::after {
+      content: '';
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      width: 80px;
+      height: 80px;
+      background: var(--gold-grad);
+      border-radius: 8px;
+      z-index: -1;
+      opacity: .15;
+    }
+
+    /* ════════════════════════════════════════
+     MILESTONE LIST
+  ════════════════════════════════════════ */
+    .milestone-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .ms {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px 18px;
+      background: rgba(255, 255, 255, .025);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color .3s;
+    }
+
+    .ms:hover {
+      border-color: rgba(249, 223, 85, .28);
+    }
+
+    .ms-icon {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      background: rgba(249, 223, 85, .07);
+      border: 1px solid rgba(249, 223, 85, .2);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+    }
+
+    .ms h4 {
+      font-size: .92rem;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .ms p {
+      font-size: .82rem;
+      color: rgba(255, 255, 255, .72);
+    }
+
+    /* ════════════════════════════════════════
+     PULL QUOTE
+  ════════════════════════════════════════ */
+    .pull-quote {
+      border-left: 3px solid var(--gold);
+      padding-left: 20px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      font-style: italic;
+      color: rgba(255, 255, 255, .88);
+      line-height: 1.6;
+      margin: 22px 0;
+    }
+
+    /* ════════════════════════════════════════
+     TAGS
+  ════════════════════════════════════════ */
+    .tag-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 13px;
+      border-radius: 100px;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+      background: rgba(249, 223, 85, .07);
+      border: 1px solid rgba(249, 223, 85, .2);
+      color: var(--gold);
+    }
+
+    /* ════════════════════════════════════════
+     CHECK LIST
+  ════════════════════════════════════════ */
+    .check-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .95rem;
+      color: rgba(255, 255, 255, .88);
+    }
+
+    .check-item svg {
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* ════════════════════════════════════════
+     FEATURE CARD (endotips)
+  ════════════════════════════════════════ */
+    .feature-card {
+      background: rgba(255, 255, 255, .025);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(249, 223, 85, .07), transparent 70%);
+    }
+
+    /* ════════════════════════════════════════
+     INSTITUTO SECTION
+  ════════════════════════════════════════ */
+    #instituto {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #instituto::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(249, 223, 85, .05), transparent 60%);
+      pointer-events: none;
+    }
+
+    .instituto-block {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .instituto-logo {
+      height: 62px;
+      object-fit: contain;
+      margin: 0 auto 32px;
+      filter: brightness(0) invert(1);
+    }
+
+    /* ════════════════════════════════════════
+     DESPEGA FEATURES GRID
+  ════════════════════════════════════════ */
+    .fg-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 32px;
+    }
+
+    .fg {
+      display: flex;
+      gap: 13px;
+      align-items: flex-start;
+      padding: 18px;
+      background: rgba(255, 255, 255, .025);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color .3s, background .3s;
+    }
+
+    .fg:hover {
+      border-color: rgba(249, 223, 85, .26);
+      background: rgba(249, 223, 85, .04);
+    }
+
+    .fg-icon {
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .fg h4 {
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .fg p {
+      font-size: .82rem;
+      color: rgba(255, 255, 255, .72);
+    }
+
+    /* ════════════════════════════════════════
+     TESTIMONIALS
+  ════════════════════════════════════════ */
+    .t-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .t-card {
+      background: rgba(255, 255, 255, .025);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 26px;
+      position: relative;
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+    }
+
+    .t-card:hover {
+      border-color: rgba(249, 223, 85, .22);
+      transform: translateY(-5px);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, .45);
+    }
+
+    .t-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: .62rem;
+      font-weight: 700;
+      background: rgba(249, 223, 85, .1);
+      color: var(--gold);
+    }
+
+    .t-badge.ph {
+      background: rgba(220, 220, 220, .07);
+      color: var(--muted2);
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: .82rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .t-text {
+      font-size: .9rem;
+      line-height: 1.72;
+      color: rgba(255, 255, 255, .88);
+      margin-bottom: 18px;
+    }
+
+    .t-author {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: var(--gold-grad);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: .82rem;
+      color: #000;
+    }
+
+    .avatar.ph {
+      background: var(--d3);
+      color: var(--muted);
+    }
+
+    .t-name {
+      font-size: .9rem;
+      font-weight: 700;
+    }
+
+    .t-role {
+      font-size: .78rem;
+      color: rgba(255, 255, 255, .65);
+    }
+
+    .ph-note {
+      font-size: .66rem;
+      color: rgba(249, 223, 85, .38);
+      font-style: italic;
+      margin-top: 10px;
+    }
+
+    .t-separator {
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 40px 0 18px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .t-separator::before,
+    .t-separator::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ════════════════════════════════════════
+     SOCIAL CARDS
+  ════════════════════════════════════════ */
+    .s-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .s-card {
+      background: rgba(255, 255, 255, .025);
+      border: 1px solid rgba(249, 223, 85, .35);
+      box-shadow: 0 0 18px rgba(249, 223, 85, .07);
+      border-radius: 16px;
+      padding: 36px 26px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 13px;
+      color: var(--white);
+      transition: transform .3s, box-shadow .3s;
+      animation: card-glow 3.5s ease-in-out infinite;
+    }
+
+    @keyframes card-glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 18px rgba(249, 223, 85, .07);
+      }
+
+      50% {
+        box-shadow: 0 0 28px rgba(249, 223, 85, .14);
+      }
+    }
+
+    .s-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 0 36px rgba(249, 223, 85, .22), 0 26px 52px rgba(0, 0, 0, .45);
+    }
+
+    .s-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 13px;
+      background: rgba(249, 223, 85, .1);
+      border: 1px solid rgba(249, 223, 85, .3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+    }
+
+    .s-num {
+      font-size: 1.85rem;
+      font-weight: 900;
+      background: var(--gold-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .s-lbl {
+      font-size: .8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: rgba(255, 255, 255, .6);
+    }
+
+    .s-handle {
+      font-size: .9rem;
+      font-weight: 600;
+    }
+
+    .s-cta {
+      font-size: .8rem;
+      color: rgba(255, 255, 255, .45);
+    }
+
+    /* ════════════════════════════════════════
+     NEWSLETTER
+  ════════════════════════════════════════ */
+    #newsletter {
+      position: relative;
+      overflow: hidden;
+    }
+
+    #newsletter::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 10% 50%, rgba(249, 223, 85, .07), transparent 44%),
+        radial-gradient(ellipse at 90% 50%, rgba(244, 187, 77, .07), transparent 44%);
+      pointer-events: none;
+    }
+
+    .nl-inner {
+      max-width: 660px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .nl-perks {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      margin: 18px 0 34px;
+    }
+
+    .nl-perk {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .85rem;
+      color: rgba(255, 255, 255, .72);
+    }
+
+    .nl-perk svg {
+      color: var(--gold);
+    }
+
+    .nl-form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nl-input {
+      flex: 1;
+      min-width: 180px;
+      padding: 13px 18px;
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .13);
+      border-radius: 6px;
+      color: var(--white);
+      font-size: .9rem;
+      font-family: 'Poppins', sans-serif;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    .nl-input:focus {
+      border-color: var(--gold);
+    }
+
+    .nl-input::placeholder {
+      color: rgba(255, 255, 255, .35);
+    }
+
+    .nl-note {
+      font-size: .7rem;
+      color: var(--muted);
+      margin-top: 13px;
+    }
+
+    .nl-success {
+      display: none;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 16px;
+      background: rgba(249, 223, 85, .08);
+      border: 1px solid rgba(249, 223, 85, .28);
+      color: var(--gold);
+      font-weight: 700;
+      font-size: .92rem;
+    }
+
+    /* ════════════════════════════════════════
+     ALIADOS
+  ════════════════════════════════════════ */
+    .aliados-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 52px;
+      flex-wrap: wrap;
+    }
+
+    .aliado {
+      height: 72px;
+      object-fit: contain;
+      filter: grayscale(100%) brightness(2);
+      opacity: .55;
+      transition: filter .35s, opacity .35s, transform .35s;
+    }
+
+    .aliado:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+      transform: scale(1.06);
+    }
+
+    /* ════════════════════════════════════════
+     FOOTER
+  ════════════════════════════════════════ */
+    #footer {
+      background: var(--black);
+      border-top: 1px solid var(--border);
+      padding: 64px 60px 36px;
+    }
+
+    .footer-grid {
+      max-width: 1160px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 44px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .footer-brand img {
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand .footer-tagline {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .footer-brand p {
+      font-size: .86rem;
+      color: rgba(255, 255, 255, .72);
+      line-height: 1.75;
+      max-width: 280px;
+      margin-bottom: 20px;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 9px;
+    }
+
+    .footer-socials a {
+      width: 34px;
+      height: 34px;
+      border-radius: 7px;
+      border: 1px solid rgba(249, 223, 85, .4);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s, border-color .2s;
+    }
+
+    .footer-socials a:hover {
+      background: rgba(249, 223, 85, .1);
+      border-color: var(--gold);
+    }
+
+    .fcol h5 {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, .5);
+      margin-bottom: 16px;
+    }
+
+    .fcol ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .fcol ul a {
+      font-size: .9rem;
+      color: rgba(255, 255, 255, .68);
+      transition: color .2s;
+    }
+
+    .fcol ul a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      max-width: 1160px;
+      margin: 28px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .8rem;
+      color: rgba(255, 255, 255, .65);
+    }
+
+    /* ════════════════════════════════════════
+     DIVIDER
+  ════════════════════════════════════════ */
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+    }
+
+    /* ════════════════════════════════════════
+     SCROLL ANIMATIONS
+  ════════════════════════════════════════ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(34px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-34px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(34px);
+      transition: opacity .8s ease, transform .8s ease;
+    }
+
+    .visible {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    /* ════════════════════════════════════════
+     RESPONSIVE
+  ════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .two-col {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .two-col.flip .col-img {
+        order: 0;
+      }
+
+      .two-col.flip .col-text {
+        order: 0;
+      }
+
+      .t-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .fg-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      #nav,
+      #nav.scrolled {
+        padding: 15px 24px;
+      }
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      #hero {
+        padding: 110px 24px 60px 24px;
+      }
+
+      .hero-photo {
+        width: 100%;
+        opacity: .35;
+      }
+
+      .hero-mask {
+        background: linear-gradient(180deg, rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, .88) 60%, rgba(0, 0, 0, .96) 100%);
+      }
+
+      .section {
+        padding: 72px 24px;
+      }
+
+      #stats-strip {
+        padding: 24px;
+      }
+
+      .t-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .s-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+      }
+
+      .aliados-logos {
+        gap: 28px;
+      }
+
+      #footer {
+        padding: 52px 24px 30px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-name {
+        font-size: 2.9rem;
+      }
+
+      .hero-ctas {
+        flex-direction: column;
+      }
+
+      .hero-ctas .btn {
+        justify-content: center;
+      }
+
+      .stat-sep {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVDDD538"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ╔══════════════════════════════════════╗
+     ║              NAVBAR                  ║
+     ╚══════════════════════════════════════╝ -->
+  <nav id="nav">
+    <div class="nav-logo">
+      <a href="#">
+        <img src="images/logo/Logo_4_1.webp" alt="Braulio García" onerror="this.src='images/logo/Logo_1_1.webp'">
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">Sobre Mí</a></li>
+      <li><a href="#instituto">Instituto</a></li>
+      <li><a href="#despega">DESPEGA</a></li>
+      <li><a href="#convierte">Conviértete</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#redes">Redes</a></li>
+    </ul>
+    <a href="https://wa.link/u6nuo7" target="_blank" class="btn btn-gold nav-cta" style="margin-left:16px;">
+      <!-- heroicon: phone -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="15" height="15">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0-1.242 1.008-2.25 2.25-2.25h2.25c.621 0 1.176.354 1.419.91l.773 1.545a2.25 2.25 0 01-.363 2.378l-1.338 1.338a16.088 16.088 0 007.495 7.495l1.592-1.595a2.25 2.25 0 012.356-.36l1.545.773c.556.243.91.798.91 1.419v2.25a2.25 2.25 0 01-2.25 2.25h-1.5c-8.29 0-15-6.71-15-15v-1.5z" />
+      </svg>
+      ¡Contactar!
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menú" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#about" onclick="closeMenu()">Sobre Mí</a>
+    <a href="#instituto" onclick="closeMenu()">Instituto</a>
+    <a href="#despega" onclick="closeMenu()">DESPEGA</a>
+    <a href="#convierte" onclick="closeMenu()">Conviértete en Acción</a>
+    <a href="#testimonios" onclick="closeMenu()">Testimonios</a>
+    <a href="#redes" onclick="closeMenu()">Redes Sociales</a>
+    <a href="https://wa.link/u6nuo7" target="_blank" onclick="closeMenu()" class="gold">¡Contactar!</a>
+  </div>
+
+  <!-- ╔══════════════════════════════════════╗
+     ║               HERO                   ║
+     ╚══════════════════════════════════════╝ -->
+  <section id="hero">
+    <picture>
+      <source srcset="images/fotos/Braulio_1_empresario.avif" type="image/avif">
+      <img src="images/fotos/Braulio_1_empresario.avif" alt="Braulio García" class="hero-photo">
+    </picture>
+    <div class="hero-mask"></div>
+
+    <div class="hero-content">
+      <div class="hero-pill">
+        <span class="hero-dot"></span>
+        🇬🇹 Dentista · Emprendedor · Conferencista
+      </div>
+
+      <h1 class="hero-name">
+        Braulio<br>
+        <span class="hero-name-highlight">García</span>
+      </h1>
+
+      <p class="hero-tagline">Acción Masiva, Imperfecta e Inmediata</p>
+
+      <p class="hero-desc">
+        No soy el experto que lo sabe todo. Soy el que actúa, aprende en el camino
+        y construye resultados reales. Si estás listo para pasar de la teoría a la
+        acción, este es tu lugar.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="https://wa.link/u6nuo7" target="_blank" class="btn btn-gold">
+          <!-- heroicon: phone -->
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="16" height="16">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0-1.242 1.008-2.25 2.25-2.25h2.25c.621 0 1.176.354 1.419.91l.773 1.545a2.25 2.25 0 01-.363 2.378l-1.338 1.338a16.088 16.088 0 007.495 7.495l1.592-1.595a2.25 2.25 0 012.356-.36l1.545.773c.556.243.91.798.91 1.419v2.25a2.25 2.25 0 01-2.25 2.25h-1.5c-8.29 0-15-6.71-15-15v-1.5z" />
+          </svg>
+          ¡Contactar!
+        </a>
+        <a href="#instituto" class="btn btn-outline">
+          Conoce mis proyectos
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            width="15" height="15">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+      </div>
+
+      <span class="hero-scroll">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          width="13" height="13">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+        Descubre más
+      </span>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+     ║            STATS STRIP               ║
+     ╚══════════════════════════════════════╝ -->
+  <div id="stats-strip">
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="stat-num" data-count="20" data-suffix="+">20+</div>
+        <div class="stat-lbl">Años en odontología</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <div class="stat-num">42.4K+</div>
+        <div class="stat-lbl">Seguidores Instagram</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <div class="stat-num">1</div>
+        <div class="stat-lbl">Maratón completado</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <div class="stat-num">70.3</div>
+        <div class="stat-lbl">Ironman finalizado</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="3" data-suffix="">3</div>
+        <div class="stat-lbl">Empresas activas</div>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <div class="stat-num">🌎</div>
+        <div class="stat-lbl">Guatemala → Mundo</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ╔══════════════════════════════════════╗
+     ║           SOBRE BRAULIO              ║
+     ╚══════════════════════════════════════╝ -->
+  <section id="about" class="section" style="background:var(--d2);">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="col-img photo-frame reveal-left">
+          <img src="images/fotos/Braulio_2_conferencias_1.webp" alt="Braulio García en conferencia">
+        </div>
+        <div class="col-text reveal-right">
+          <div class="eyebrow">Sobre Mí</div>
+          <h2 class="sec-title">Del bisturí<br>al <em>escenario</em></h2>
+          <div class="gold-bar"></div>
+          <p class="sec-body">
+            Nací el 21 de septiembre de 1986 en Guatemala. Llevo el nombre de mi padre
+            y bisabuelo — como si el legado le fuera dado desde el primer día. Soy el mayor de
+            tres hermanos y entendí desde pequeño que el carácter se forja con disciplina
+            y decisiones firmes.
+          </p>
+          <div class="pull-quote">
+            "Prefiero avanzar y corregir que quedarme esperando el momento perfecto."
+          </div>
+          <p class="sec-body">
+            Estudié Odontología en la Universidad Mariano Gálvez y me especialicé en
+            Endodoncia en San Luis Potosí, México. Regresé convencido de que todo estaba
+            resuelto — y la vida me enseñó que los sueños no se construyen perfectos:
+            se construyen <strong style="color:var(--white)">persistiendo</strong>.
+          </p>
+          <div class="milestone-list">
+            <div class="ms">
+              <div class="ms-icon">
+                <!-- heroicon: academic-cap -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" width="18" height="18">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                </svg>
+              </div>
+              <div>
+                <h4>Endodoncista & Fundador de Clínica Disfruta</h4>
+                <p>Más de 20 años construyendo excelencia dental en Guatemala.</p>
+              </div>
+            </div>
+            <div class="ms">
+              <div class="ms-icon">
+                <!-- heroicon: fire -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" width="18" height="18">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Maratón & Ironman 70.3</h4>
+                <p>Se inscribió sin estar listo. Compitió de todas formas. Ganó más que una medalla.</p>
+              </div>
+            </div>
+            <div class="ms">
+              <div class="ms-icon">
+                <!-- heroicon: rocket-launch -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" width="18" height="18">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Instituto del Legado</h4>
+                <p>Nació en la pandemia. Hoy forma odontólogos en lo que la universidad no enseña.</p>
+              </div>
+            </div>
+            <div class="ms">
+              <div class="ms-icon">
+                <!-- heroicon: heart -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" width="18" height="18">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Nelly, sus hijos y su legado</h4>
+                <p>Esposo y padre de tres. El verdadero legado es cómo ama, enseña y vive.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ╔══════════════════════════════════════╗
+     ║           FACETA DENTAL              ║
+     ╚══════════════════════════════════════╝ -->
+  <section id="dental" class="section" style="background:var(--d1);">
+    <div class="wrap">
+      <div class="two-col flip">
+        <div class="col-text reveal-left">
+          <div class="eyebrow">Faceta Dental</div>
+          <h2 class="sec-title">El dentista que<br>eligió lo <em>más difícil</em></h2>
+          <div class="gold-bar"></div>
+          <p class="sec-body">
+            Elegí la Endodoncia porque era lo más retador — no lo que estaba de moda ni
+            lo más cómodo. Lo que me exigía ser mejor cada día. Más de 20 años después,
+            la decisión habla por sí sola.
+          </p>
+          <p class="sec-body" style="margin-top:14px;">
+            Hoy la <strong style="color:var(--white)">Clínica Disfruta</strong> es el
+            resultado de errores, pérdidas, aprendizajes y una obstinada negativa a
+            rendirme. Empecé sin nombre y hoy tiene identidad propia.
+          </p>
+          <div class="tag-row">
+            <span class="tag">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                stroke="currentColor" width="10" height="10">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Endodoncista
+            </span>
+            <span class="tag">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                stroke="currentColor" width="10" height="10">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              20+ años de experiencia
+            </span>
+            <span class="tag">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                stroke="currentColor" width="10" height="10">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Clínica Disfruta
+            </span>
+          </div>
+        </div>
+        <div class="col-img photo-frame reveal-right">
+          <img src="images/fotos/Braulio_4_clinica_1.webp" alt="Braulio García como dentista">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+     ║             ENDOTIPS                 ║
+     ╚══════════════════════════════════════╝ -->
+  <section id="endotips" class="section" style="background:var(--d2);">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="col-img photo-frame reveal-left">
+          <img src="images/fotos/Braulio_3_endotips_1.webp" alt="Braulio García - Endotips">
+        </div>
+        <div class="col-text reveal-right">
+          <div class="eyebrow">El origen</div>
+          <h2 class="sec-title">Endotips:<br>el proyecto que<br>lo <em>cambió todo</em></h2>
+          <div class="gold-bar"></div>
+          <div class="feature-card">
+            <p class="sec-body">
+              Antes de los escenarios, antes del Instituto — estuvo Endotips. El proyecto
+              con el que comencé a construir mi marca personal en el mundo dental:
+              compartiendo conocimiento con ese estilo directo que hoy me define como líder
+              de opinión.
+            </p>
+            <p class="sec-body" style="margin-top:14px;">
+              Endotips me demostró que un dentista puede ser también comunicador, autor y voz
+              que inspira a colegas a salir de la zona cómoda del consultorio.
+            </p>
+          </div>
+          <a href="https://www.youtube.com/@institutodeLegado/" target="_blank" class="btn btn-outline"
+            style="margin-top:28px;">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" width="17" height="17">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 12a9 9 0 11-18 0 9 9 0 0118 0zM15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.328l5.603 3.113z" />
+            </svg>
+            Ver en YouTube
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ╔══════════════════════════════════════╗
+     ║         INSTITUTO DEL LEGADO         ║
+     ╚══════════════════════════════════════╝ -->
+  <section id="instituto" class="section" style="background:var(--black);">
+    <div class="wrap">
+      <div class="instituto-block reveal">
+        <img src="images/portafolio/logo-instituto-de-legado_1.webp" alt="Instituto del Legado" class="instituto-logo"
+          onerror="this.style.display='none'">
+        <div class="eyebrow" style="justify-content:center;">Mi Proyecto Principal</div>
+        <h2 class="sec-title" style="max-width:660px;margin:0 auto 18px;text-align:center;">
+          Todo lo que la universidad<br>no te <em>enseñó</em>
+        </h2>
+        <p
+          style="color:rgba(255,255,255,.58);max-width:560px;margin:0 auto 40px;font-size:.95rem;line-height:1.85;text-align:center;">
+          La pandemia me obligó a cuestionarme quién era más allá de ser dentista.
+          La respuesta fue el Instituto del Legado — el espacio que creé para formar odontólogos
+          en <strong style="color:var(--white)">mentalidad, negocio y propósito</strong>.
+          Lo que el título no enseña pero el éxito requiere.
+        </p>
+        <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+          <a href="https://institutodelegado.com/" target="_blank" class="btn btn-gold">
+            Conocer el Instituto
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" width="14" height="14">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+          <a href="https://institutodelegado.com/blog" target="_blank" class="btn btn-outline">
+            Leer el Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ╔══════════════════════════════════════╗
+     ║           MÉTODO DESPEGA             ║
+     ╚══════════════════════════════════════╝ -->
+  <section id="despega" class="section" style="background:var(--d2);">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="col-img reveal-left">
+          <img src="images/portafolio/despega_1.webp" alt="Método DESPEGA"
+            style="width:100%;border-radius:14px;object-fit:cover;">
+        </div>
+        <div class="col-text reveal-right">
+          <div class="eyebrow">Método DESPEGA</div>
+          <h2 class="sec-title">El mapa hacia<br>la <em>excelencia</em></h2>
+          <div class="gold-bar"></div>
+          <p class="sec-body">
+            DESPEGA es el programa del Instituto del Legado que le da a los dentistas
+            lo que más falta hace: <strong style="color:var(--white)">orden, estructura
+              y claridad</strong> para transformar su clínica en un negocio que trabaje
+            para ellos — no al revés.
+          </p>
+          <div class="fg-grid">
+            <div class="fg">
+              <div class="fg-icon">
+                <!-- heroicon: play-circle -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" width="22" height="22">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0zM15.91 11.672a.375.375 0 010 .656l-5.603 3.113a.375.375 0 01-.557-.328V8.887c0-.286.307-.466.557-.328l5.603 3.113z" />
+                </svg>
+              </div>
+              <div>
+                <h4>50+ Clases en HD</h4>
+                <p>Método completo de productividad y negocio dental</p>
+              </div>
+            </div>
+            <div class="fg">
+              <div class="fg-icon">
+                <!-- heroicon: sparkles -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" width="22" height="22">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Tutor 24/7 con IA</h4>
+                <p>Inteligencia artificial disponible en todo momento</p>
+              </div>
+            </div>
+            <div class="fg">
+              <div class="fg-icon">
+                <!-- heroicon: user-group -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" width="22" height="22">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Comunidad Privada</h4>
+                <p>Chat directo con tu maestro Braulio García</p>
+              </div>
+            </div>
+            <div class="fg">
+              <div class="fg-icon">
+                <!-- heroicon: document-text -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" width="22" height="22">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                </svg>
+              </div>
+              <div>
+                <h4>+30 GPTs & Plantillas</h4>
+                <p>Recursos descargables listos para implementar</p>
+              </div>
+            </div>
+          </div>
+          <a href="https://institutodelegado.com/" target="_blank" class="btn btn-gold" style="margin-top:34px;">
+            Quiero conocer DESPEGA
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" width="14" height="14">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ╔══════════════════════════════════════╗
+     ║        CONVIERTE EN ACCIÓN           ║
+     ╚══════════════════════════════════════╝ -->
+  <section id="convierte" class="section" style="background:var(--d1);">
+    <div class="wrap">
+      <div class="two-col flip">
+        <div class="col-text reveal-left">
+          <div class="eyebrow">Programa</div>
+          <h2 class="sec-title">Convierte<br>en <em>Acción</em></h2>
+          <div class="gold-bar"></div>
+          <p class="sec-body">
+            Creé este programa para transformar a profesionales y emprendedores en creadores de
+            contenido que venden. No teoría que se queda en la carpeta. Acción real desde
+            el primer día frente a la cámara.
+          </p>
+          <div class="check-list">
+            <div class="check-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                stroke="currentColor" width="16" height="16">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Perder el miedo a la cámara de una vez por todas
+            </div>
+            <div class="check-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                stroke="currentColor" width="16" height="16">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Crear contenido que genera ventas en TikTok e Instagram
+            </div>
+            <div class="check-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                stroke="currentColor" width="16" height="16">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Convertirte en el referente de tu industria en redes sociales
+            </div>
+            <div class="check-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                stroke="currentColor" width="16" height="16">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Para dentistas, vendedores y emprendedores — con resultados comprobados
+            </div>
+          </div>
+        </div>
+        <div class="col-img reveal-right">
+          <img src="images/portafolio/conviertete-en-accion_1.webp" alt="Conviértete en Acción"
+            style="width:100%;border-radius:14px;object-fit:cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+     ║           TESTIMONIOS                ║
+     ╚══════════════════════════════════════╝ -->
+  <section id="testimonios" class="section" style="background:var(--d2);">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:52px;" class="reveal">
+        <div class="eyebrow" style="justify-content:center;">Resultados Reales</div>
+        <h2 class="sec-title">Lo que dicen<br>los que <em>actuaron</em></h2>
+      </div>
+
+      <!-- Conviértete en Acción -->
+      <div class="t-separator">Conviértete en Acción</div>
+      <div class="t-grid">
+
+        <div class="t-card reveal">
+          <span class="t-badge">Conviértete en Acción</span>
+          <div class="stars">★★★★★</div>
+          <p class="t-text">Me animé a hacer video y se me hizo viral en TikTok con
+            <strong>95,000 reproducciones</strong>. Más de 100 mensajes preguntando por
+            mis escaleras de acero inoxidable — y no sabía ni cómo responder tantos.
+            ¡Un happy problem!
+          </p>
+          <div class="t-author">
+            <div class="avatar">G</div>
+            <div>
+              <div class="t-name">Gustavo</div>
+              <div class="t-role">Guatemala · Escaleras de Acero Inoxidable</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card reveal" style="transition-delay:.08s">
+          <span class="t-badge">Conviértete en Acción</span>
+          <div class="stars">★★★★★</div>
+          <p class="t-text">Tenía terror a la cámara. Hoy grabo contenido para mi tienda
+            y tengo un viral en TikTok de <strong>34,000 visualizaciones</strong>.
+            Perdí el miedo y encontré mi voz.</p>
+          <div class="t-author">
+            <div class="avatar">N</div>
+            <div>
+              <div class="t-name">Narly</div>
+              <div class="t-role">Colombia · Tienda</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card reveal" style="transition-delay:.16s">
+          <span class="t-badge">Conviértete en Acción</span>
+          <div class="stars">★★★★★</div>
+          <p class="t-text">Vendía celulares y no prendía la cámara — me daba terror.
+            Hoy soy el influencer de mi pueblo. Un TikTok llegó a
+            <strong>18,000 visualizaciones</strong> y trajo tantos pedidos que fue
+            otro happy problem.
+          </p>
+          <div class="t-author">
+            <div class="avatar">P</div>
+            <div>
+              <div class="t-name">Pedro</div>
+              <div class="t-role">Guatemala · Venta de Celulares</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card reveal" style="transition-delay:.06s">
+          <span class="t-badge">Conviértete en Acción</span>
+          <div class="stars">★★★★★</div>
+          <p class="t-text">Soy dentista y me convertí en el dentista viral de TikTok
+            de mi pueblo. <strong>Con un solo paciente que llegó por TikTok</strong>
+            me fui de viaje con mi esposa e hijas a Disney.</p>
+          <div class="t-author">
+            <div class="avatar">E</div>
+            <div>
+              <div class="t-name">Erick</div>
+              <div class="t-role">Guatemala · Dentista</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card reveal" style="transition-delay:.14s">
+          <span class="t-badge">Conviértete en Acción</span>
+          <div class="stars">★★★★★</div>
+          <p class="t-text">Mi negocio de herramientas estaba por cerrar. Empezamos
+            con estrategia de lives y pasé a
+            <strong>vender $1,000 dólares por semana en TikTok</strong>. Hoy soy el
+            referente de la marca en mi región.
+          </p>
+          <div class="t-author">
+            <div class="avatar">M</div>
+            <div>
+              <div class="t-name">Maynor</div>
+              <div class="t-role">Guatemala · Venta de Herramientas</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="t-card reveal" style="transition-delay:.22s">
+          <span class="t-badge">Conviértete en Acción</span>
+          <div class="stars">★★★★★</div>
+          <p class="t-text">Aprendí a mejorar mi español al perder el miedo a la cámara.
+            Braulio me enseñó que el miedo no desaparece — simplemente deja de tener
+            el control cuando decides actuar.</p>
+          <div class="t-author">
+            <div class="avatar">J</div>
+            <div>
+              <div class="t-name">Jenn</div>
+              <div class="t-role">Los Ángeles, California</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /t-grid -->
+
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+     ║          REDES SOCIALES              ║
+     ╚══════════════════════════════════════╝ -->
+  <section id="redes" class="section" style="background:var(--black);">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:52px;" class="reveal">
+        <div class="eyebrow" style="justify-content:center;">Síguelo</div>
+        <h2 class="sec-title">Únete a la comunidad<br>de los que <em>actúan</em></h2>
+        <p style="color:rgba(255,255,255,.5);max-width:460px;margin:0 auto;font-size:.92rem;">
+          Contenido de valor para dentistas, doctores y emprendedores que quieren
+          resultados reales, no solo teoría.
+        </p>
+      </div>
+      <div class="s-grid">
+
+        <a href="https://www.instagram.com/soybraulio.garcia/" target="_blank" class="s-card reveal">
+          <div class="s-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </div>
+          <div class="s-num">42.4K</div>
+          <div class="s-lbl">Seguidores</div>
+          <div class="s-handle">@soybraulio.garcia</div>
+          <div class="s-cta">Ver en Instagram →</div>
+        </a>
+
+        <a href="https://www.tiktok.com/@soybraulio.garcia" target="_blank" class="s-card reveal"
+          style="transition-delay:.1s">
+          <div class="s-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z" />
+            </svg>
+          </div>
+          <div class="s-num">6,046</div>
+          <div class="s-lbl">Seguidores</div>
+          <div class="s-handle">@soybraulio.garcia</div>
+          <div class="s-cta">Ver en TikTok →</div>
+        </a>
+
+        <a href="https://www.youtube.com/@institutodeLegado/" target="_blank" class="s-card reveal"
+          style="transition-delay:.2s">
+          <div class="s-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </div>
+          <div class="s-num"
+            style="font-size:1.35rem;-webkit-text-fill-color:initial;background:none;color:var(--gold);">YouTube</div>
+          <div class="s-lbl">Canal Oficial</div>
+          <div class="s-handle">@institutodeLegado</div>
+          <div class="s-cta">Suscribirse →</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+     ║            NEWSLETTER                ║
+     ╚══════════════════════════════════════╝ -->
+  <section id="newsletter" class="section" style="background:var(--d2); display:none;">
+    <div class="wrap">
+      <div class="nl-inner reveal">
+        <div class="eyebrow" style="justify-content:center;">Newsletter</div>
+        <h2 class="sec-title" style="max-width:560px;margin:0 auto 16px;text-align:center;">
+          Únete a los que<br><em>SÍ toman acción</em>
+        </h2>
+        <p
+          style="color:rgba(255,255,255,.58);font-size:.95rem;line-height:1.85;max-width:500px;margin:0 auto;text-align:center;">
+          Contenido de valor para dentistas, doctores y emprendedores que quieren
+          pasar de aprender a <strong style="color:var(--white)">implementar</strong>.
+          Marketing, negocios y desarrollo personal — con la lupa de la acción real.
+        </p>
+        <div class="nl-perks">
+          <div class="nl-perk">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" width="13" height="13">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Sin spam
+          </div>
+          <div class="nl-perk">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" width="13" height="13">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Solo valor real
+          </div>
+          <div class="nl-perk">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+              stroke="currentColor" width="13" height="13">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Cancela cuando quieras
+          </div>
+        </div>
+        <form class="nl-form" id="nlForm" onsubmit="submitNewsletter(event)">
+          <input type="text" class="nl-input" placeholder="Tu nombre" required>
+          <input type="email" class="nl-input" placeholder="Tu correo electrónico" required>
+          <button type="submit" class="btn btn-gold">
+            Quiero recibir valor
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+              stroke="currentColor" width="14" height="14">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </button>
+        </form>
+        <div class="nl-success" id="nlSuccess">
+          ✅ ¡Listo! Pronto nos vemos en tu bandeja de entrada.
+        </div>
+        <p class="nl-note">
+          📌 Nota: conectar este formulario a tu proveedor de email (Mailchimp, ConvertKit, etc.) para activar el envío
+          real.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+     ║         ALIADOS ESTRATÉGICOS         ║
+     ╚══════════════════════════════════════╝ -->
+  <section id="aliados" class="section" style="background:var(--d1);padding-top:64px;padding-bottom:64px;">
+    <div class="wrap reveal">
+      <div style="text-align:center;margin-bottom:44px;">
+        <div class="eyebrow" style="justify-content:center;">Aliados Estratégicos</div>
+        <p style="color:rgba(255,255,255,.38);font-size:.8rem;margin-top:4px;">
+          Marcas y organizaciones que confían en mi trabajo
+        </p>
+      </div>
+      <div class="aliados-logos">
+        <img src="images/alianzas/colgate.webp" alt="Colgate" class="aliado">
+        <img src="images/alianzas/crovana.webp" alt="Crovana" class="aliado">
+        <img src="images/alianzas/dentalink.webp" alt="Dentalink" class="aliado">
+        <img src="images/alianzas/libersity.webp" alt="Libersity" class="aliado">
+      </div>
+    </div>
+  </section>
+
+  <!-- ╔══════════════════════════════════════╗
+     ║              FOOTER                  ║
+     ╚══════════════════════════════════════╝ -->
+  <footer id="footer">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <img src="images/logo/Logo_1_1.webp" alt="Braulio García" onerror="this.style.display='none'">
+        <p class="footer-tagline">Acción Masiva, Imperfecta e Inmediata.</p>
+        <p>Odontólogo, emprendedor y creador de contenido.<br>Desde Guatemala 🇬🇹 para el mundo.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/soybraulio.garcia/" target="_blank" title="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@soybraulio.garcia" target="_blank" title="TikTok">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.53V6.75a4.85 4.85 0 01-1.02-.06z" />
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@institutodeLegado/" target="_blank" title="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="fcol">
+        <h5>Proyectos</h5>
+        <ul>
+          <li><a href="https://institutodelegado.com/" target="_blank">Instituto del Legado</a></li>
+          <li><a href="https://institutodelegado.com/" target="_blank">Método DESPEGA</a></li>
+          <li><a href="#convierte">Conviértete en Acción</a></li>
+          <li><a href="#endotips">Endotips</a></li>
+          <li><a href="#dental">Clínica Disfruta</a></li>
+        </ul>
+      </div>
+
+      <div class="fcol">
+        <h5>Recursos</h5>
+        <ul>
+          <li><a href="https://institutodelegado.com/blog" target="_blank">Blog</a></li>
+          <li><a href="https://institutodelegado.com/plantilla-financiera-de-ingresos-y-egresos/"
+              target="_blank">Plantilla Financiera</a></li>
+          <li><a href="https://www.youtube.com/@institutodeLegado/" target="_blank">YouTube</a></li>
+          <li><a href="https://wa.link/u6nuo7" target="_blank">Contactar por WhatsApp</a></li>
+        </ul>
+      </div>
+
+      <div class="fcol">
+        <h5>Sígueme</h5>
+        <ul>
+          <li><a href="https://www.instagram.com/soybraulio.garcia/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@soybraulio.garcia" target="_blank">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@institutodeLegado/" target="_blank">YouTube</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Braulio García. Todos los derechos reservados.</span>
+      <span>🇬🇹 Hecho con acción desde Guatemala</span>
+    </div>
+  </footer>
+
+  <!-- ╔══════════════════════════════════════╗
+     ║            JAVASCRIPT                ║
+     ╚══════════════════════════════════════╝ -->
+  <script>
+    /* ── Navbar: scroll effect ── */
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav')
+        .classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ── Mobile menu ── */
+    function toggleMenu() {
+      const h = document.getElementById('hamburger');
+      const d = document.getElementById('mobileDrawer');
+      h.classList.toggle('open');
+      d.classList.toggle('open');
+      document.body.style.overflow = d.classList.contains('open') ? 'hidden' : '';
+    }
+    function closeMenu() {
+      document.getElementById('hamburger').classList.remove('open');
+      document.getElementById('mobileDrawer').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    /* ── Scroll reveal ── */
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right')
+      .forEach(el => revealObserver.observe(el));
+
+    /* ── Stat counter animation ── */
+    function animateCount(el, target, suffix) {
+      const dur = 1800;
+      let startTime = null;
+      function step(ts) {
+        if (!startTime) startTime = ts;
+        const p = Math.min((ts - startTime) / dur, 1);
+        const ease = 1 - Math.pow(1 - p, 3); // cubic ease-out
+        el.textContent = Math.round(ease * target) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('[data-count]').forEach(el => {
+            const target = parseInt(el.dataset.count, 10);
+            const suffix = el.dataset.suffix ?? '+';
+            animateCount(el, target, suffix);
+          });
+          statsObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.6 });
+    const statsEl = document.getElementById('stats-strip');
+    if (statsEl) statsObserver.observe(statsEl);
+
+    /* ── Newsletter form ── */
+    function submitNewsletter(e) {
+      e.preventDefault();
+      document.getElementById('nlForm').style.display = 'none';
+      document.getElementById('nlSuccess').style.display = 'block';
+    }
+
+    /* ── Smooth scroll for # links ── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          closeMenu();
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 50);
+        }
+      });
+    });
+
+    /* ── Scroll dark hero CTA */
+    const heroScroll = document.querySelector('.hero-scroll');
+    if (heroScroll) {
+      heroScroll.addEventListener('click', () => {
+        window.scrollBy({ top: window.innerHeight * 0.35, left: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+
+</html>
